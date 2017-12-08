@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13196" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13051"/>
+    </dependencies>
+    <scenes>
+        <!--Drink Interface Controller-->
+        <scene sceneID="yiv-3d-mVw">
+            <objects>
+                <controller id="w1Z-xl-cJd" customClass="DrinkInterfaceController" customModule="Boozy_v2_WatchKit_Extension">
+                    <items>
+                        <button width="1" height="35" alignment="left" title="Add Wine" id="j6K-D0-B9x">
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.54569777399999997" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="chosewine" destination="w1Z-xl-cJd" id="Ncf-uT-RD5"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="10" alignment="center" text="0 x🍷" textAlignment="center" numberOfLines="2" id="tyi-PH-fEe"/>
+                        <button width="1" height="36" alignment="left" title="Add Shot (80+ proof)" id="usb-q6-Ujn">
+                            <color key="backgroundColor" red="0.43877930650000002" green="0.95261120799999999" blue="0.41579435069999998" alpha="0.37483494719999999" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="choseshot" destination="w1Z-xl-cJd" id="Rdf-gi-Dgu"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="10" alignment="center" text="0 x🥃" textAlignment="center" numberOfLines="2" id="hA1-sI-MT7"/>
+                        <button width="1" height="35" alignment="left" title="Add Beer" id="zqG-zl-8vd">
+                            <color key="backgroundColor" red="0.95261120799999999" green="0.77872657779999999" blue="0.3018989265" alpha="0.37483494719999999" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="chosebeer" destination="w1Z-xl-cJd" id="xLx-pd-1nu"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="10" alignment="center" text="0 x🍺" textAlignment="center" numberOfLines="2" id="RWi-Kn-SfV"/>
+                        <button width="1" height="35" alignment="left" title="Add Cocktail" id="Dhv-qm-F3x">
+                            <color key="backgroundColor" red="0.71595190259999997" green="0.4628571628" blue="0.95261120799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="chosecocktail" destination="w1Z-xl-cJd" id="zRp-Si-gXQ"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="18" alignment="center" text="0 x🍸" textAlignment="center" numberOfLines="2" id="elp-VV-q6v"/>
+                        <separator alignment="left" id="PF3-0o-74J"/>
+                        <button width="69" alignment="center" title="Reset" id="DYu-vK-LIX">
+                            <color key="backgroundColor" red="1" green="0.078526610410000003" blue="0.097256707009999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="resetbuttonfordrinks" destination="w1Z-xl-cJd" id="CXw-vf-f8e"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="beerlabel" destination="RWi-Kn-SfV" id="QZV-hS-2qO"/>
+                        <outlet property="chosecocktail" destination="Dhv-qm-F3x" id="y67-lA-tKf"/>
+                        <outlet property="cocktaillabel" destination="elp-VV-q6v" id="jD9-Z2-WC1"/>
+                        <outlet property="shotlabel" destination="hA1-sI-MT7" id="ZgS-Tc-Fyv"/>
+                        <outlet property="winelabel" destination="tyi-PH-fEe" id="9bX-xP-Bsg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-278" y="566.5"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Boozy_v2_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="32" height="27" alignment="left" title="⚙️" id="Zet-KX-ttG">
+                            <connections>
+                                <segue destination="wZN-wy-FrK" kind="push" id="eYH-ie-PO2"/>
+                            </connections>
+                        </button>
+                        <button width="120" alignment="center" title="View Summary " id="sy3-de-vQq">
+                            <color key="backgroundColor" red="1" green="0.25533974189999997" blue="0.33707876240000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="summaryButton" destination="AgC-eL-Hgc" id="use-6J-rMC"/>
+                            </connections>
+                        </button>
+                        <button width="123" alignment="center" title="My Info" id="NZ2-rI-DcO">
+                            <connections>
+                                <action selector="clickingmyinfp" destination="AgC-eL-Hgc" id="fcI-d8-nzB"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="glc-C7-TNf">
+                            <color key="color" red="1" green="0.25533974189999997" blue="0.33707876240000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </separator>
+                        <imageView width="45" height="48" alignment="center" image="Drink" id="Cqa-oH-CBI">
+                            <color key="tintColor" red="1" green="0.43785649869999999" blue="0.71330893159999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </imageView>
+                        <button width="100" height="37" alignment="center" title="Add drink" id="whb-7w-sdr">
+                            <color key="backgroundColor" red="1" green="0.25533974189999997" blue="0.33707876240000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="clickingplusdrinks" destination="AgC-eL-Hgc" id="XEA-Oq-08W"/>
+                                <segue destination="w1Z-xl-cJd" kind="push" id="Lq8-Nj-Nx2"/>
+                            </connections>
+                        </button>
+                        <imageView width="46" height="42" alignment="left" image="Water" id="Kg1-Dh-YEP"/>
+                        <label width="118" alignment="center" text="Drink H20" textAlignment="center" id="ZVy-dY-8Kn"/>
+                        <label alignment="center" text="0" textAlignment="center" id="MTQ-sE-E1b"/>
+                        <button width="107" height="37" alignment="center" title="I had a water" id="nFp-rW-aHA" userLabel="ihadwaterbutton">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.48560634689999999" green="0.6242473503" blue="0.95261120799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="ihadwaterclick" destination="AgC-eL-Hgc" id="BGU-UK-Z7Z"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="IzP-Vx-gZx">
+                            <color key="color" red="0.48560634689999999" green="0.6242473503" blue="0.95261120799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </separator>
+                        <button width="65" alignment="center" verticalAlignment="center" title="Reset" id="1XO-zm-0VJ">
+                            <gestureRecognizers>
+                                <longPressGestureRecognizer id="Pbc-SR-HZO">
+                                    <connections>
+                                        <action selector="longpressresetdrinkscount:" destination="AgC-eL-Hgc" id="quu-Xh-FDL"/>
+                                    </connections>
+                                </longPressGestureRecognizer>
+                            </gestureRecognizers>
+                            <color key="backgroundColor" red="1" green="0.078526610410000003" blue="0.097256707009999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="clickingReset" destination="AgC-eL-Hgc" id="hyF-ZP-XV4"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="drinkh20title" destination="nFp-rW-aHA" id="3Jh-xH-qRU"/>
+                        <outlet property="numberofwaterleft" destination="MTQ-sE-E1b" id="TPn-qg-YRT"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="176" y="390.5"/>
+        </scene>
+        <!--Weight Interfact Controller-->
+        <scene sceneID="r3K-3b-1ua">
+            <objects>
+                <controller id="xzx-Tr-KDM" customClass="WeightInterfactController" customModule="Boozy_v2_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="120" id="DDm-ou-vSp"/>
+                        <label alignment="left" text="lbs" id="vvl-hy-NqL"/>
+                        <button width="52" alignment="left" title="+" id="fHp-hF-PEY">
+                            <connections>
+                                <action selector="addingweight" destination="xzx-Tr-KDM" id="SAd-FL-rcz"/>
+                            </connections>
+                        </button>
+                        <button width="50" alignment="left" title="-" id="xjC-fl-Btf">
+                            <connections>
+                                <action selector="subtractweight" destination="xzx-Tr-KDM" id="zpV-8d-V4L"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Done" id="Y1B-hR-zBK">
+                            <connections>
+                                <action selector="donebuttonw" destination="xzx-Tr-KDM" id="oVo-8X-L1V"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="subtractweight" destination="xjC-fl-Btf" id="tdc-Zm-5Ev"/>
+                        <outlet property="weightcounter" destination="DDm-ou-vSp" id="GRK-rE-mKw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="238" y="-19"/>
+        </scene>
+        <!--Age Interface Controller-->
+        <scene sceneID="lZC-SR-YG0">
+            <objects>
+                <controller id="zva-K6-lNK" customClass="AgeInterfaceController" customModule="Boozy_v2_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="21" id="ve4-sg-0r0"/>
+                        <button width="52" alignment="left" title="+" id="3oy-Aq-idx">
+                            <connections>
+                                <action selector="addingtoage" destination="zva-K6-lNK" id="L9W-A8-SkN"/>
+                            </connections>
+                        </button>
+                        <button width="50" alignment="left" title="-" id="v6P-Og-HDe">
+                            <connections>
+                                <action selector="subtractingage" destination="zva-K6-lNK" id="t3u-nR-CNp"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Done" id="7IS-tD-jh0">
+                            <connections>
+                                <action selector="donebuttona" destination="zva-K6-lNK" id="1Vy-ZZ-m9O"/>
+                            </connections>
+                        </button>
+                        <label height="102" alignment="left" textAlignment="left" numberOfLines="5" id="E2Z-yE-Lle">
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="agecounter" destination="ve4-sg-0r0" id="U2Z-6f-EBo"/>
+                        <outlet property="warning" destination="E2Z-yE-Lle" id="7sa-IT-IUZ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="539" y="-130"/>
+        </scene>
+        <!--Gender Interface Controller-->
+        <scene sceneID="oze-6a-spv">
+            <objects>
+                <controller id="CaK-qD-QYJ" customClass="GenderInterfaceController" customModule="Boozy_v2_WatchKit_Extension">
+                    <items>
+                        <button width="28" height="22" alignment="left" title="ℹ︎" id="G3l-qX-WWP">
+                            <connections>
+                                <segue destination="63U-lg-Xth" kind="modal" id="T1T-bd-WjJ"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="👱🏼 Boy" id="PTI-Bj-YHx">
+                            <connections>
+                                <action selector="male" destination="CaK-qD-QYJ" id="kfk-aT-ss9"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="👩🏼 Girl " id="EOU-g4-Asb">
+                            <connections>
+                                <action selector="female" destination="CaK-qD-QYJ" id="26J-nw-UBS"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="femalebutton" destination="EOU-g4-Asb" id="0sg-b0-Rxw"/>
+                        <outlet property="malebutton" destination="PTI-Bj-YHx" id="iIe-t3-M7a"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="808" y="-7"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="bAM-9D-Cdh">
+            <objects>
+                <controller id="63U-lg-Xth">
+                    <items>
+                        <label alignment="left" textAlignment="left" baselineAdjustment="alignCenters" numberOfLines="13" id="Z7j-r9-4eF">
+                            <string key="text">We ask for gender only to help determine your BAL (blood alcohol level) more acurately. For this reason, please inidicate your gender of birth. That said, we love &amp; respect everyone. 💞</string>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1060" y="-70"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="4Ar-lL-ukA">
+            <objects>
+                <controller id="NRv-CY-IIE">
+                    <items>
+                        <button width="1" alignment="left" title="Age" id="AiI-M9-axk">
+                            <connections>
+                                <segue destination="zva-K6-lNK" kind="modal" id="TuY-cJ-qWG"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Weight" id="NsA-wT-lAv">
+                            <connections>
+                                <segue destination="xzx-Tr-KDM" kind="modal" id="a1R-cZ-Efo"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Gender" id="AXL-6Y-UGV">
+                            <connections>
+                                <segue destination="CaK-qD-QYJ" kind="modal" id="9Ah-MW-Ps5"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Drinking Experience" id="tOT-Q1-B8J">
+                            <connections>
+                                <segue destination="kio-og-iDU" kind="push" id="7SU-1Y-MbR"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Height" id="WJf-JY-ExK">
+                            <connections>
+                                <segue destination="N0L-AY-6hW" kind="modal" id="fTF-l7-Hou"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="728" y="400"/>
+        </scene>
+        <!--Height Interface Controller-->
+        <scene sceneID="shK-Q2-oPO">
+            <objects>
+                <controller id="N0L-AY-6hW" customClass="HeightInterfaceController" customModule="Boozy_v2_WatchKit_Extension">
+                    <items>
+                        <button width="28" height="22" alignment="left" title="ℹ︎" id="lFp-Bq-395">
+                            <connections>
+                                <segue destination="tr9-3o-pTI" kind="modal" id="tCt-ke-toe"/>
+                            </connections>
+                        </button>
+                        <label alignment="left" text="5.6 " id="wBf-k5-P4w"/>
+                        <label alignment="left" text="ft." id="WuG-xV-vgr"/>
+                        <button width="1" alignment="left" title="Speak 🗣" id="n8R-eS-Q4s">
+                            <connections>
+                                <action selector="heighttts" destination="N0L-AY-6hW" id="vvy-gd-VGK"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Done" id="4Mp-mZ-GnI">
+                            <connections>
+                                <action selector="donebuttonh" destination="N0L-AY-6hW" id="Gyx-5s-hfC"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="heightlabel" destination="wBf-k5-P4w" id="H0v-qd-WbG"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1021" y="492"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="F28-up-3GW">
+            <objects>
+                <controller id="tr9-3o-pTI">
+                    <items>
+                        <label alignment="left" text="Please round height to the nearest foot. So if you're 5'5, say 5' and if you're 5'7 say 6'. 📐" textAlignment="left" baselineAdjustment="alignCenters" numberOfLines="13" id="5hH-6z-ilb"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1279" y="325"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="804"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Boozy_v2_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="661" y="738"/>
+        </scene>
+        <!--Drinking Exp Interface Controller-->
+        <scene sceneID="Uvt-xD-Ao7">
+            <objects>
+                <controller id="kio-og-iDU" customClass="DrinkingExpInterfaceController" customModule="Boozy_v2_WatchKit_Extension">
+                    <items>
+                        <button width="28" height="22" alignment="left" title="ℹ︎" id="AMb-I4-fGO">
+                            <connections>
+                                <segue destination="WJN-eD-tNH" kind="modal" id="lHH-hf-kvV"/>
+                            </connections>
+                        </button>
+                        <label alignment="left" text="I am a:" id="QlA-fJ-mpL"/>
+                        <button width="1" alignment="left" title="Novice" id="VhM-on-gu9">
+                            <connections>
+                                <action selector="NoviceButton" destination="kio-og-iDU" id="okc-Oh-nbZ"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Advanced Beginner" id="SlA-g6-8DB">
+                            <connections>
+                                <action selector="AdvBegButton" destination="kio-og-iDU" id="qtD-em-Ydn"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Proficent" id="XOU-Ou-8lc">
+                            <connections>
+                                <action selector="ProfButton" destination="kio-og-iDU" id="Kd5-tD-4mI"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Competent" id="ldu-tV-S35">
+                            <connections>
+                                <action selector="CompButton" destination="kio-og-iDU" id="8tv-pv-14j"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Expert" id="FgN-XL-dUH">
+                            <connections>
+                                <action selector="ExperButton" destination="kio-og-iDU" id="4Ng-Qb-ceb"/>
+                            </connections>
+                        </button>
+                        <label alignment="left" text="drinker." id="7pU-JG-mym"/>
+                    </items>
+                    <connections>
+                        <outlet property="AdvButtonRef" destination="SlA-g6-8DB" id="yeL-nz-fvX"/>
+                        <outlet property="CompButtonRef" destination="ldu-tV-S35" id="61X-1X-dB0"/>
+                        <outlet property="ExperButtonRef" destination="FgN-XL-dUH" id="PA0-XK-GXx"/>
+                        <outlet property="NovButtonRef" destination="VhM-on-gu9" id="pzM-pb-SAW"/>
+                        <outlet property="ProfButtonRef" destination="XOU-Ou-8lc" id="sou-7F-CNy"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="894" y="842"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="qmF-tB-syc">
+            <objects>
+                <controller id="WJN-eD-tNH">
+                    <items>
+                        <label alignment="left" textAlignment="left" baselineAdjustment="alignCenters" numberOfLines="13" id="80g-p3-Ben">
+                            <string key="text">We use this to guage the amount of water you should have. The less expeience you have drinking, the more water we will recommend to stabilize your BAC. 🍹</string>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1192" y="809"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="L4G-Mp-F8f">
+            <objects>
+                <controller id="wZN-wy-FrK">
+                    <items>
+                        <button width="1" alignment="left" title="About you" id="jPc-PX-xlt">
+                            <connections>
+                                <segue destination="NRv-CY-IIE" kind="push" id="pfJ-mj-UlC"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="About Boozy" id="aiK-fV-k75">
+                            <connections>
+                                <segue destination="rNV-F9-9mJ" kind="modal" id="iP5-Nz-OMt"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="496" y="137"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="UEF-us-XTO">
+            <objects>
+                <controller id="rNV-F9-9mJ">
+                    <items>
+                        <label alignment="left" textAlignment="left" baselineAdjustment="alignCenters" numberOfLines="29" id="3TC-1Z-i7X">
+                            <mutableString key="text">Boozy 🍷 is a fun and interactive app to help you track your drinking. This app is intented to prevent hangovers by recommending water based on your blood alcohol level. You BAC is a guestimate based on an equation we wrote and should not be used to guage your ability to drive. Please do NOT drink and drive, be safe. We are not responsible nor do we condone under age drinking of any kind. Please drink responsably!  💙</mutableString>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="421" y="683"/>
+        </scene>
+    </scenes>
+</document>
