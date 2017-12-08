@@ -7,4 +7,4 @@ Welcome to Boozy version 2, an Apple watch app! 🍹
 * A new drink selector
 * New design
 
-To view Boozy on the interwebs, checkout our YouTube video [here](https://www.youtube.com/watch?v=cZHQ9Owi6W0).
+To view Boozy on the interwebs, check out our YouTube video [here](https://www.youtube.com/watch?v=cZHQ9Owi6W0).
